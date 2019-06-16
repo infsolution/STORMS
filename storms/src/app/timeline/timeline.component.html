@@ -1,0 +1,11 @@
+<div *ngFor="let member of members" class="container">
+<div class="card">
+  <h5 class="card-header">{{member.name}}</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{member.task.desc}}</h5>
+    <p class="card-text">{{member.task.activitys[0].desc}} {{member.task.activitys[0].date}}</p>
+    <a href="#" class="btn btn-primary">Visualizar</a>
+  </div>
+</div>
+<br/>
+</div>

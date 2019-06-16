@@ -6,7 +6,8 @@
       <th scope="col">codigo</th>
       <th scope="col">Nome</th>
       <th scope="col">Tarefa</th>
-      <th scope="col">Concluida</th>
+      <th scope="col">Concluído</th>
+      <th scope="col">Conclusão</th>
     </tr>
   </thead>
   <tbody>
@@ -14,7 +15,8 @@
         <td>{{member.id}}</td>
         <td>{{member.name}}</td>
         <td>{{member.task.desc}}</td>
-        <td>27%</td>    
+        <td>{{member.task.percent}}%</td>
+        <td>{{member.task.deadline}}</td>    
     </tr>
   </tbody>
 </table>

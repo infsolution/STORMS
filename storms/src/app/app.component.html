@@ -1,13 +1,16 @@
-<nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">
-    Storms
-  </a>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand"  routerLink="timeline">Storms</a>
+  <a class="navbar-brand"  routerLink="members">Tarefas</a>
 </nav>
 <div class="row">
 <div class="col-md-3">
 
 </div>
-<div class="col-md-9">
-<app-table></app-table>
+<div class="col-md-6">
+<router-outlet></router-outlet>
+</div>
+<div class="col-md-3">
+
 </div>
 </div>

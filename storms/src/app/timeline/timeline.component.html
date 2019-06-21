@@ -1,5 +1,6 @@
-<div *ngFor="let member of members" class="container">
-<div class="card">
+<h2>Tarefas entregues</h2>
+<div *ngFor="let member of members">
+<div class="card com-md-7">
   <h5 class="card-header">{{member.name}}</h5>
   <div class="card-body">
     <h5 class="card-title">{{member.task.desc}}</h5>

@@ -4,13 +4,11 @@
   <a class="navbar-brand"  routerLink="members">Tarefas</a>
 </nav>
 <div class="row">
-<div class="col-md-3">
-
-</div>
-<div class="col-md-6">
-<router-outlet></router-outlet>
-</div>
-<div class="col-md-3">
-
-</div>
+	<div class="col-md-4">
+		<app-calendar></app-calendar>
+		<app-chat></app-chat>
+	</div>
+	<div class="col-md-8">
+		<router-outlet></router-outlet>
+	</div>
 </div>

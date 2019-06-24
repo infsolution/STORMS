@@ -13,6 +13,9 @@ import { SidenaveComponent } from './sidenave/sidenave.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ChatComponent } from './chat/chat.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { DetailTarefaComponent } from './detail-tarefa/detail-tarefa.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ChatComponent } from './chat/chat.component';
     TimelineComponent,
     SidenaveComponent,
     CalendarComponent,
-    ChatComponent
+    ChatComponent,
+    LoginComponent,
+    RegisterComponent,
+    DetailTarefaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,7 @@
 <h2>Agendar Tarefa</h2>
-<div class="container">
+<div class="container col-md-4">
 	<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>	
 </div>
-
-<hr/>
 
 <!--button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
 <button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>

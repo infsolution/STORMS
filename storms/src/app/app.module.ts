@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatSidenavModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -16,6 +16,8 @@ import { ChatComponent } from './chat/chat.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DetailTarefaComponent } from './detail-tarefa/detail-tarefa.component';
+import { BrainstormingComponent } from './brainstorming/brainstorming.component';
+import { CronometroComponent } from './cronometro/cronometro.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,17 @@ import { DetailTarefaComponent } from './detail-tarefa/detail-tarefa.component';
     ChatComponent,
     LoginComponent,
     RegisterComponent,
-    DetailTarefaComponent
+    DetailTarefaComponent,
+    BrainstormingComponent,
+    CronometroComponent
   ],
   imports: [
     BrowserModule,
     //BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

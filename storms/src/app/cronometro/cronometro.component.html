@@ -1,0 +1,30 @@
+<div class="cronometro-body">
+    <h1>Tempo restante</h1>
+    <div class="buttons">
+        <button (click)="start()"> Iniciar </button>
+        <button (click)="lapso()"> Lapso </button>
+        <button (click)="stop()"> Parar </button>
+
+    </div>
+
+    <div class="container-numbers">
+        <p> {{hora}} : {{minutos}} : {{segundos}}</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>N</th>
+                <th>Lapsos</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cole of colection; let i = index" >
+                <td>{{i+1}}</td>
+                <td><p class="lapsos" >
+                    {{cole.hora}} : {{cole.minutos}} : {{cole.segundos}}</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

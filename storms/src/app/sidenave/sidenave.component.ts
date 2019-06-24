@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import {MatSidenavModule} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-sidenave',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenave.component.css']
 })
 export class SidenaveComponent implements OnInit {
-
+	
+	isShown:boolean=false;
   constructor() { }
 
   ngOnInit() {

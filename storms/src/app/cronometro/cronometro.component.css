@@ -1,0 +1,89 @@
+.cronometro-body{
+    background: #ebece7;
+    border: #639c89 dotted 5px;
+}
+.cronometro-body > h1{
+    color: #f57979;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    margin: 10px;
+}
+.buttons{
+    width: 100%;
+    text-align: center;
+}
+.buttons > button{
+    padding: 10px;
+    color: #fff;
+    background: #96d4bf;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+}
+.buttons > button:hover{
+    background: #639c89;
+    text-decoration: none;
+}
+.container-numbers{
+    background: #52645e;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: 5px auto;
+    width: 50%;
+}
+.container-numbers > p > .lapsos{
+    background-color: #ebece7;
+}
+
+table {
+    background-color: #ebece7;
+    color: #333;
+    font-family: sans-serif;
+    font-size: .9em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 40px;
+    border-spacing: 0;
+    /*border: 1px solid #96d4bf;*/
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+thead tr:first-child {
+    background: #f57979;
+    color: #fff;
+    border: none;
+}
+
+th {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+th:first-child,
+td:first-child {
+    padding: 0 15px 0 20px;
+}
+
+thead tr:last-child th {
+    border-bottom: 2px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f0fbff;
+}
+
+tbody tr:last-child td {
+    border: none;
+}
+
+tbody td {
+    border-bottom: 1px solid #ddd;
+}
+
+td:last-child {
+    text-align: right;
+}

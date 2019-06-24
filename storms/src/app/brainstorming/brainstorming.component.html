@@ -1,0 +1,77 @@
+<div *ngIf="participar">
+	<app-cronometro></app-cronometro>
+</div>
+<div *ngIf="criar">
+<h2>Criar um Brainstorming</h2>
+<form action="/action_page.php" class="needs-validation" novalidate>
+	<div class="form-group col-md-10">
+	  <label for="uname">Nome do brainstorming:</label>
+	  <input type="text" class="form-control" id="uname" name="uname" required>
+	  <div class="valid-feedback">Valid.</div>
+	  <div class="invalid-feedback">Please fill out this field.</div>
+	</div>
+	<div class="form-group">
+	  <label for="pwd">Assunto ou problema:</label>
+	  <input type="password" class="form-control" id="pwd" name="pswd" required>
+	  <div class="valid-feedback">Valid.</div>
+	  <div class="invalid-feedback">Please fill out this field.</div>
+	</div>
+	<div class="form-group">
+	  <label for="pwd">Horario de inicio</label>
+	  <input type="datetime" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+	  <div class="valid-feedback">Valid.</div>
+	  <div class="invalid-feedback">Please fill out this field.</div>
+	</div>
+	<div class="form-group">
+	  <label for="pwd">Horario de término</label>
+	  <input type="datetime" class="form-control" id="pwd" name="pswd">
+	  <div class="valid-feedback">Valid.</div>
+	  <div class="invalid-feedback">Please fill out this field.</div>
+	</div>
+	<div class="form-group form-check">
+	  <label class="form-check-label">
+	    <input class="form-check-input" type="checkbox" name="remember" required> Não especificar um tempo.
+	    <div class="valid-feedback">Valid.</div>
+	    <div class="invalid-feedback">Check this checkbox to continue.</div>
+	  </label>
+	</div>
+	<button type="submit" class="btn btn-primary">Criar</button>
+</form>
+</div>
+<div *ngIf="participar">
+	<form >
+		<h2>Cadastre sua ideia</h2>
+		<div class="form-group">
+		  <label for="uname">Sua ideia</label>
+		  <input type="text" class="form-control" id="ideia" name="ideia" required>
+		  <div class="valid-feedback">Valid.</div>
+		  <div class="invalid-feedback">Please fill out this field.</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Cadastrar ideia</button>
+	</form>
+</div>
+
+<div *ngIf="finished">
+	<h2>Relação de ideias cadastradas</h2>
+<div class="container-fluid">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">codigo</th>
+      <th scope="col">Ideia</th>
+      <th scope="col">Votar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  class="table-primary">
+        <td>23</td>
+        <td>Criar tabelas para expor conteudo</td>
+        <td><button>votar</button></td>
+ 
+    </tr>
+  </tbody>
+</table>
+</div>
+	
+</div>

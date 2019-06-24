@@ -1,15 +1,11 @@
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand"  routerLink="timeline">Storms</a>
-  <a class="navbar-brand"  routerLink="members">Tarefas</a>
-  <a  class="navbar-brand" routerLink="login">Login</a>
-</nav>
+<app-sidenave></app-sidenave>
 <div class="row">
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<app-calendar></app-calendar>
 		<app-chat></app-chat>
 	</div>
-	<div class="col-md-9">
+	<div class="col-md-8">
 		<router-outlet></router-outlet>
 	</div>
+	
 </div>

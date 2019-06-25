@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+//import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsComponent } from './projects/projects.component';
@@ -42,9 +42,15 @@ import { CronometroComponent } from './cronometro/cronometro.component';
     FormsModule,
     MatSidenavModule
   ],
+  //entryComponents: [ChatComponent],
   providers: [],
   bootstrap: [AppComponent],
   exports: [AppComponent]
 
 })
-export class AppModule { }
+export class AppModule { 
+  /*constructor(injector: Injector){
+    const custom = createCustomElement(ChatComponent,{injector: injector});
+    customElements.define('app-chat', custom);
+  }*/
+}

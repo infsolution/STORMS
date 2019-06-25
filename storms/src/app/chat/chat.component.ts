@@ -11,5 +11,17 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
   }
+showChats(){
+  document.getElementById("myChat").style.display="block";
+  document.getElementById("btChat").style.display="none";
+}
+hidesChat(){
+  document.getElementById("myChat").style.display="none";
+  document.getElementById("btChat").style.display="block";
+  }
 
+  sendMessage(){
+    var conversa = document.getElementById("message").innerText.valueOf;
+    document.getElementById("conversa").innerHTML = document.getElementById("conversa").innerHTML+conversa+"<br/>";
+  }
 }

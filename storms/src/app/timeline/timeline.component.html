@@ -1,13 +1,21 @@
-<app-sidenave></app-sidenave>
-<!--h2>Tarefas para entregar</h2>
-<div *ngFor="let member of members" >
-<div class="card col-md-10">
-  <h5 class="card-header">{{member.name}}</h5>
-  <div class="card-body">
-    <h5 class="card-title">{{member.task.desc}}</h5>
-    <p class="card-text">{{member.task.activitys[0].desc}} {{member.task.activitys[0].date}}</p>
-    <a routerLink="/detail/1" class="btn btn-primary">Visualizar</a>
-  </div>
+<div class="12">
+	<app-sidenave></app-sidenave>
 </div>
-<br/>
-</div-->
+<div class="row">
+	<div class="col-md-4">
+			
+	</div>
+	<div class="col-md-8">
+		<ul>
+			<li *ngFor="let atributo of atributos">
+				
+			</li>
+		</ul>
+		
+	</div>
+</div>
+<div class="col-12">
+	
+</div>
+
+<router-outlet></router-outlet>

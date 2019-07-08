@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { createCustomElement } from '@angular/elements';
@@ -24,7 +23,19 @@ import { ChartsModule } from 'ng2-charts';
 import { MessageComponent } from './message/message.component';
 import { MemberComponent } from './member/member.component';
 import { MemberService } from './member.service';
-
+import {  
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatProgressSpinnerModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatTableModule,
+MatToolbarModule } from '@angular/material';
+import { MenuComponent } from './menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +52,8 @@ import { MemberService } from './member.service';
     CronometroComponent,
     ChartComponent,
     MessageComponent,
-    MemberComponent
+    MemberComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +64,18 @@ import { MemberService } from './member.service';
     ReactiveFormsModule,
     MatSidenavModule,
     ChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatProgressSpinnerModule, 
+    MatSelectModule,
+    MatSidenavModule,  
+    MatTableModule,
+MatToolbarModule,
+LayoutModule
   ],
   //entryComponents: [ChatComponent],
   providers: [MemberService],

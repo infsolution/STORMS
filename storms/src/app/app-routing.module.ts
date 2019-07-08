@@ -13,7 +13,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes =[
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/timeline', pathMatch: 'full' },
   { path: 'members', component: TableComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },

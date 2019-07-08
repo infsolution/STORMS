@@ -9,12 +9,28 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  AUTH_SERVER = "http://localhost:8000";
+  AUTH_SERVER = "http://storms.infsolution.com.br";
   authSubject  =  new  BehaviorSubject(false);
   constructor(private httpClient: HttpClient) { }
 
-  singIn(user: User): Observable<JwtResponse>{
-    return this.httpClient.post(`${this.AUTH_SERVER}/api-token-auth`, user).pipe(
+static getToken(): string {
+    return localStorage.getItem('ACCESS_TOKEN');
+  }
+
+public login(userInfo: User){
+    localStorage.setItem('ACCESS_TOKEN', "access_token");
+  }
+  
+public isLoggedIn(){
+    return localStorage.getItem('ACCESS_TOKEN') !== null;
+
+  }
+
+public logout(){
+    localStorage.removeItem('ACCESS_TOKEN');
+  }
+  /*singIn(user: User): Observable<JwtResponse>{
+    return this.httpClient.post(`${this.AUTH_SERVER}/api-token-auth/`, user).pipe(
       tap(async(res: JwtResponse)=>{
         if (res.user){
           localStorage.setItem("ACCESS_TOKEN", res.user.access_token);
@@ -32,5 +48,6 @@ export class AuthService {
   }
   isAuthenticated() {
     return  this.authSubject.asObservable();
-}
+  }*/
+
 }

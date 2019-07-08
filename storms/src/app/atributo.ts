@@ -1,8 +1,8 @@
-import { Member } from './member';
+import { User } from './user';
 
 export class Atributo {
-    owner: Member;
+    owner: User;
     descricao: string;
-    responsavel: Member;
+    responsavel: User;
     andamento: number;
 }

@@ -11,8 +11,8 @@ const httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'
 })
 export class UserService {
   private memberUrl = 'storms.infsolution.com.br/api/user/';
-  private memberUrlCreat = 'http://localhost:8000/api/user-create/';
-  //private memberUrlCreat = 'http://storms.infsolution.com.br/api/user-create/';
+  //private memberUrlCreat = 'http://localhost:8000/api/user-create/';
+  private memberUrlCreat = 'http://storms.infsolution.com.br/api/user-create/';
   constructor(private http: HttpClient, private messageService: MessageService) { }
   getMembers():Observable<User[]>{
     return this.http.get<User[]>(this.memberUrl).pipe(tap(_=> this.log('usuários')),

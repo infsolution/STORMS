@@ -11,11 +11,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let member of members" class="table-primary">
+    <tr *ngFor="let member of members" class="table-secondary">
         <td>{{member.id}}</td>
         <td>{{member.name}}</td>
         <td>{{member.task.desc}}</td>
-        <td>{{member.task.percent}}%</td>
+        <!--td>{{member.task.percent}}%</td-->
+        <td>
+          <div class="progress-bar">
+            <div [ngStyle]="{'width.%':member.task.percent}" class="progresso"></div>
+          </div>
+        </td>
         <td>{{member.task.deadline}}</td>    
     </tr>
   </tbody>

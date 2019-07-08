@@ -7,9 +7,3 @@ const TASKS: Task[]=[
   {id:3, desc:'Criar Interface', deadline:'21/07/2019', percent:18,activitys:[{id:3,desc:'Criar template ',date:'13/06/2019 17:45:19'}]},
   {id:4, desc:'Criar lógica de negócio', deadline:'21/07/2019', percent:69, activitys:[{id:1,desc:'Cria metodo de login',date:'15/06/2019 19:15:15'}]}
 ]
-export const  MEMBERS: Member[] = [
-    { id: 1, name: 'Paulo', task: TASKS[0]},
-    { id: 2, name: 'Joao', task:TASKS[1] },
-    { id: 3, name: 'Maria', task:TASKS[2] },
-    { id: 4, name: 'Rafaela', task:TASKS[3] }
-  ];

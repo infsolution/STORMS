@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { MEMBERS } from '../mock-member'; 
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css']
 })
 export class TimelineComponent implements OnInit {
-  members = MEMBERS;
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
-
+  logout(){
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
+  }
 }

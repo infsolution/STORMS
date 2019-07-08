@@ -1,20 +1,9 @@
 <h2>Register</h2>
-<form class="col-md-7">
-	<div class="form-group">
-		<label>Username</label>
-		<input type="text" name="username" class="form-control">
-	</div>
-	<div class="form-group">
-		<label>Email</label>
-		<input type="text" name="email" class="form-control">
-	</div>
-	<div class="form-group">
-		<label>Password</label>
-		<input type="password" name="password" class="form-control">
-	</div>
-	<div class="form-group">
-		
-		<button class="btn btn-primary">Register</button>
-	</div>
-	<a routerLink="/login">Login</a>
-</form>
+<div>
+<label>Nome: <input #userName /></label>
+<label> Email: <input #email /></label>
+<label>Senha: <input #password /></label>
+<button (click)="add(userName.value, email.value, password.value);">
+    add
+  </button>
+</div>

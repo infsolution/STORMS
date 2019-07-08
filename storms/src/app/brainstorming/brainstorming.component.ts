@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrainstormingComponent implements OnInit {
 	criar=false;
-	participar=false;
-	finished=true;
+	participar=true;
+	finished=false;
   constructor() { }
 
   ngOnInit() {

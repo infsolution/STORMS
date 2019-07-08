@@ -1,6 +1,6 @@
-import { Task} from './task';
-export class Member{
+export class Member {
     id: number;
-    name: string;
-    task: Task;
+    username: string;
+    password: string;
+    email: string;
 }

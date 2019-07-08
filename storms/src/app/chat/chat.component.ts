@@ -20,8 +20,8 @@ hidesChat(){
   document.getElementById("btChat").style.display="block";
   }
 
-  sendMessage(){
-    var conversa = document.getElementById("message").innerText.valueOf;
-    document.getElementById("conversa").innerHTML = document.getElementById("conversa").innerHTML+conversa+"<br/>";
+  sendMessage(element){
+alert(document.getElementById(element).innerHTML);
+    document.getElementById("conversa").innerHTML = document.getElementById("conversa").innerHTML+element.value+"<br/>";
   }
 }

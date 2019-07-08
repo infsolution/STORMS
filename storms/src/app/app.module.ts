@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { createCustomElement } from '@angular/elements';
+import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsComponent } from './projects/projects.component';
@@ -18,6 +19,11 @@ import { RegisterComponent } from './register/register.component';
 import { DetailTarefaComponent } from './detail-tarefa/detail-tarefa.component';
 import { BrainstormingComponent } from './brainstorming/brainstorming.component';
 import { CronometroComponent } from './cronometro/cronometro.component';
+import { ChartComponent } from './chart/chart.component';
+import { ChartsModule } from 'ng2-charts';
+import { MessageComponent } from './message/message.component';
+import { MemberComponent } from './member/member.component';
+import { MemberService } from './member.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import { CronometroComponent } from './cronometro/cronometro.component';
     RegisterComponent,
     DetailTarefaComponent,
     BrainstormingComponent,
-    CronometroComponent
+    CronometroComponent,
+    ChartComponent,
+    MessageComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,
@@ -40,10 +49,13 @@ import { CronometroComponent } from './cronometro/cronometro.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    MatSidenavModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    ChartsModule,
+    HttpClientModule
   ],
   //entryComponents: [ChatComponent],
-  providers: [],
+  providers: [MemberService],
   bootstrap: [AppComponent],
   exports: [AppComponent]
 

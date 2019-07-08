@@ -1,5 +1,5 @@
 <div *ngIf="participar">
-	<!--app-cronometro></app-cronometro-->
+	<app-cronometro></app-cronometro>
 </div>
 <div *ngIf="criar">
 <h2>Criar um Brainstorming</h2>
@@ -59,6 +59,7 @@
     <tr>
       <th scope="col">codigo</th>
       <th scope="col">Ideia</th>
+	  <th scope="col">Votos</th>
       <th scope="col">Votar</th>
 
     </tr>
@@ -67,6 +68,7 @@
     <tr  class="table-primary">
         <td>23</td>
         <td>Criar tabelas para expor conteudo</td>
+		<td>03</td>
         <td><button>votar</button></td>
  
     </tr>

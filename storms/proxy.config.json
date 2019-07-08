@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "http://storms.infsolution.com.br",
+      "secure": false
+    }
+}
+  

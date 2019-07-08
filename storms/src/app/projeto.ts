@@ -1,10 +1,14 @@
-import { Manager } from './manager';
 import { Member } from './member';
-export class Project{
+import { Mensagem } from './mensagem';
+export class Projeto{
     id: number;
-    descriptio: string;
-    manager: Manager;
-    members: Member[];
-    data_init: string;
-    data_end: string;
+    owner: Member;
+    nome: string;
+    data_inicio: string;
+    previsao_entrega: string;
+    data_contrato: string;
+    colaboradores: Member[];
+    date_time: string;
+    interessado: Member;
+    chat: Mensagem[];
 }

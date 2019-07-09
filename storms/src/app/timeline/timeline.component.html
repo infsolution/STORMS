@@ -1,21 +1,42 @@
-<div class="12">
-	<app-sidenave></app-sidenave>
+<div class="col-md-12">
+	<div class="12">
+		<app-sidenave></app-sidenave>
+	</div>
 </div>
 <div class="row">
 	<div class="col-md-4">
 			
 	</div>
 	<div class="col-md-8">
-		<ul>
-			<li *ngFor="let atributo of atributos">
+		<table class="table col-md-10">
+			<thead>
+				<tr>
+				<th scope="col">codigo</th>
+				<th scope="col">Descrição</th>
+				<th scope="col">Responsavel</th>
+				<th scope="col">Andamento</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let atributo of atributos" class="table-secondary">
+					<td>{{atributo.id}}%</td>
+					<td>{{atributo.descricao}}</td>
+					<td>{{atributo.responsavel}}</td>
 				
-			</li>
-		</ul>
-		
+					<td>
+					<div class="progress-bar">
+						<div [ngStyle]="{'width.%':atributo.andamento}" class="progresso"></div>
+					</div>
+					</td>   
+				</tr>
+			</tbody>
+		</table>		
+	</div>	
+</div>
+<div class="row">
+	<div class="col-md-12">
 	</div>
 </div>
-<div class="col-12">
-	
-</div>
-
 <router-outlet></router-outlet>
+
+

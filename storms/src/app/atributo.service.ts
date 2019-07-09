@@ -7,8 +7,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { AuthService } from './auth/auth.service';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json',
-  'Authorization': AuthService.getToken()})
+  headers: new HttpHeaders({ 
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + localStorage.getItem('ACCESS_TOKEN')
+})
 };
 
 @Injectable({
@@ -17,7 +19,7 @@ const httpOptions = {
 
 
 export class AtributoService {
- private atributoUrl = 'storms.infsolution.com.br/api/atributo/';
+ private atributoUrl = 'http://storms.infsolution.com.br/api/atributo/';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 

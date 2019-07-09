@@ -13,12 +13,13 @@ export class AuthService {
   authSubject  =  new  BehaviorSubject(false);
   constructor(private httpClient: HttpClient) { }
 
-static getToken(): string {
+public getToken(): string {
     return localStorage.getItem('ACCESS_TOKEN');
   }
 
 public login(userInfo: User){
-    localStorage.setItem('ACCESS_TOKEN', "access_token");
+    localStorage.setItem('ACCESS_TOKEN', "token 975dac396660d4faf1b40380473ede40ca8f1921");
+    console.log(localStorage.getItem('ACCESS_TOKEN'));
   }
   
 public isLoggedIn(){

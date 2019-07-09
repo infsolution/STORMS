@@ -9,7 +9,7 @@ import { AuthService } from './auth/auth.service';
 const httpOptions = {
   headers: new HttpHeaders({ 
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + localStorage.getItem('ACCESS_TOKEN')
+    'Authorization': 'token 975dac396660d4faf1b40380473ede40ca8f1921'
 })
 };
 
